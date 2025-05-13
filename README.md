@@ -69,7 +69,8 @@ endmodule
 
 **TIMING DIGRAMS FOR FLIP FLOPS**
 
-![waveform d](https://github.com/user-attachments/assets/ff2180cb-31c0-4d69-8395-b233bb9ae7b6)
+![image](https://github.com/user-attachments/assets/54f2593c-51d3-44be-a8be-c3aefb084601)
+
 
 
 **RESULTS**
