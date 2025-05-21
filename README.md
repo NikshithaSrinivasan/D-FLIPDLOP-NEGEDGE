@@ -28,51 +28,42 @@ Next state of D flip-flop is always equal to data input, D for every positive tr
 
 **Procedure**
 
-```
-Developed by : NIKSHITHA S
-Reg no : 24900161
-```
-```
-1.Define Module: Define a Verilog module for the D flip-flop with inputs (D, CLK) and outputs (Q, Q_bar).
-
-2.Declare Inputs and Outputs: Declare input and output ports for the module.
-
-3.Implement Flip-Flop Logic: Write Verilog code to implement the D flip-flop logic based on its functional table. Use a synchronous always @(posedge CLK) block to trigger the flip-flop on the positive edge of the clock signal.
-
-4.Simulate Using Testbench: Write a Verilog testbench to simulate the behavior of the D flip-flop under different input conditions.
-
-5.Apply Input Stimuli: In the testbench, apply various combinations of input stimuli (D, CLK) to cover all possible input states.
-
-6.Verify Output Behavior: Verify that the output behavior of the D flip-flop matches the expected behavior defined by its functional table.
-
-7.Check for Race Conditions: Ensure that there are no race conditions or undefined states in the design by analyzing the timing and sequence of input changes.
-```
+/* write all the steps invloved */
 
 **PROGRAM**
 
+/* Program for flipflops and verify its truth table in quartus using Verilog programming.
 ```
-module Dflipflop(D,Clock,reset,Q);
-input D,reset,Clock;
-output reg Q;
-always @ (negedge Clock)
-if(!reset)
-Q <= 0;
-else
-Q <= D;
+Developed by:NIKSHITHA S
+RegisterNumber:212224040220
+```
+*/
+
+```
+module exp_8(D,clk,Q,Qbar); 
+input D,clk; 
+output reg Q; 
+output reg Qbar; 
+initial Q=0;
+initial Qbar=1; 
+always @(negedge clk) 
+begin 
+Q=D; 
+Qbar=~D; 
+end 
 endmodule
 ```
 
 **RTL LOGIC FOR FLIPFLOPS**
 
-![image](https://github.com/user-attachments/assets/6a95716d-2982-43ce-897d-7c3beda99570)
+![436481130-eed5112d-19bf-40df-9df7-0069bf68822a](https://github.com/user-attachments/assets/18bbed1a-241e-40d7-911e-48c3f279d7ee)
 
 
 **TIMING DIGRAMS FOR FLIP FLOPS**
 
-![image](https://github.com/user-attachments/assets/54f2593c-51d3-44be-a8be-c3aefb084601)
-
+![436481974-e2f9b0b6-a953-4407-8153-02f003d1a493](https://github.com/user-attachments/assets/db95afa1-474a-495e-bd07-ffebb0bacec7)
 
 
 **RESULTS**
 
-Thus,the D Flip-Flop is designed and its functionality is validated using the truth table and timing diagrams.
+Thus the D flip flop is executed in Quartus and output is verified
